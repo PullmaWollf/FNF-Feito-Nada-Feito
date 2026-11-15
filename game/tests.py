@@ -57,5 +57,19 @@ class ChartTests(SimpleTestCase):
         self.assertEqual(len(self.client.get('/api/levels/').json()['levels']),3)
         for i in range(1,4):
             self.assertEqual(self.client.get(f'/api/charts/{i}/').json(),make_chart(i))
-        self.assertEqual(self.client.get('/api/charts/4/').status_code,404)
+        self.assertEqual(self.client.get('/api/charts/4/').status_code,200)
+        self.assertEqual(self.client.get('/api/charts/5/').status_code,404)
         self.assertEqual(self.client.get('/api/charts/0/').status_code,404)
+
+    def test_all_charts_validate_and_secret_escalates(self):
+        from .validate_charts import validate
+        for level in range(1,5):
+            for difficulty in ('easy','medium','hard','insane'):
+                self.assertGreater(validate(make_chart(level,difficulty)),0)
+        secret=make_chart(4,'insane')
+        duet=secret['duet_start']
+        notes=secret['notes']
+        first=sum(1 for n in notes if n['time']<20)
+        last=sum(1 for n in notes if duet<n['time']<duet+20)
+        self.assertGreater(last,first)
+        self.assertEqual({n['side'] for n in notes if n['time']>duet},{'player','enemy'})

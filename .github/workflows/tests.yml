@@ -16,3 +16,5 @@ jobs:
       - run: python manage.py test
       - run: node tests/engine.test.cjs
       - run: node tests/gameplay.test.cjs
+      - run: node tests/audio-engine.test.cjs
+      - run: python -m game.validate_charts

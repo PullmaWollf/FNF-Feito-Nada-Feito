@@ -13,10 +13,48 @@ MELODIES = [
     [10,7,5,3,5,7,3,2,0,2,3,0],
 ]
 DIFFICULTIES = ('easy', 'medium', 'hard', 'insane')
+SECRET = dict(id=4,name='Respect My Rhythm',subtitle='Cartman não aceita perder. Dueto original no final.',bpm=172,bars=72,speed=690,anger='BÔNUS SECRETO',color='#f6d44b')
+
+def finalize_chart(c):
+    c.update(chart_version=3,meter='4/4',key='C minor',offset=0)
+    names=['INTRO','CONSTRUÇÃO','VERSO','REFRÃO','BREAK','CLÍMAX','OUTRO']
+    energies=[.45,.65,.8,1,.35,1,.5]
+    fractions=[0,.1,.22,.42,.56,.66,.92,1]
+    beat=60/c['bpm']
+    c['sections']=[dict(name=name,start=(4+c['bars']*4*fractions[i])*beat,end=min(c['duration'],(4+c['bars']*4*fractions[i+1])*beat),energy=energies[i]) for i,name in enumerate(names)]
+    for n in c['notes']:
+        n['id']=f"{n['side']}:{n['time']}:{n['lane']}"
+    return c
+
+def secret_chart(difficulty):
+    beat=60/SECRET['bpm']
+    notes=[]
+    for bar in range(SECRET['bars']):
+        phase=min(3,bar//18)
+        steps=[4,6,8,12][phase]
+        for i in range(steps):
+            side='enemy' if bar%4<2 else 'player'
+            time=round((4+bar*4+i*4/steps)*beat,5)
+            n=dict(time=time,lane=(i+bar)%4,side=side,hold=0,pitch=MELODIES[bar//4%4][i%12])
+            notes.append(n)
+            if bar>=56:
+                notes.append(dict(n,side='player' if side=='enemy' else 'enemy'))
+            if phase==3 and i%4==2:
+                notes.append(dict(n,lane=(n['lane']+2)%4))
+    notes.sort(key=lambda n:n['time'])
+    music=[dict(n) for n in notes]
+    if difficulty in ('easy','medium'):
+        notes=[n for i,n in enumerate(notes) if i%(4 if difficulty=='easy' else 2)==0]
+    elif difficulty=='hard':
+        seen=set()
+        notes=[n for n in notes if (n['side'],n['time']) not in seen and not seen.add((n['side'],n['time']))]
+    return finalize_chart(dict(**SECRET,difficulty=difficulty,duration=(4+SECRET['bars']*4+2)*beat,notes=notes,music=music,attacks=[],duet_start=(4+56*4)*beat))
 
 def make_chart(level, difficulty='hard'):
     if difficulty not in DIFFICULTIES:
         raise ValueError('Invalid difficulty')
+    if level==4:
+        return secret_chart(difficulty)
     meta = dict(LEVELS[level-1])
     beat = 60 / meta['bpm']
     notes = []
@@ -69,4 +107,4 @@ def make_chart(level, difficulty='hard'):
     for i,n in enumerate(notes):
         if n['hold'] and any(m['side']==n['side'] and m['lane']==n['lane'] and n['time']<m['time']<n['time']+n['hold'] for m in notes[i+1:]):
             n['hold']=0
-    return dict(**meta, difficulty=difficulty, duration=(4+meta['bars']*4+2)*beat, music=music, notes=notes, attacks=attacks)
+    return finalize_chart(dict(**meta, difficulty=difficulty, duration=(4+meta['bars']*4+2)*beat, music=music, notes=notes, attacks=attacks))

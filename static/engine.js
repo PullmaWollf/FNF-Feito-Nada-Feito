@@ -1,9 +1,12 @@
 /* Pure timing rules shared by the renderer and regression checks. */
 (function(root){'use strict';
  const RULES={window:.16,sick:.045,good:.09,bad:.13,dodgeWindow:.65,warning:.8};
- function judge(delta){const d=Math.abs(delta);return d<=RULES.sick?'SICK!!':d<=RULES.good?'GOOD!':d<=RULES.bad?'BAD':'SHIT';}
- function candidate(notes,lane,t){return notes.find(n=>n.side==='player'&&n.lane===lane&&!n.hit&&!n.missed&&Math.abs(n.time-t)<=RULES.window);}
+ function judge(delta){const d=Math.abs(delta);return d>RULES.window+1e-9?'MISS':d<=RULES.sick+1e-9?'SICK!!':d<=RULES.good+1e-9?'GOOD!':d<=RULES.bad+1e-9?'BAD':'SHIT';}
+ function candidate(notes,lane,t){let best,delta=Infinity;for(const n of notes){const d=Math.abs(n.time-t);if(n.side==='player'&&n.lane===lane&&!n.hit&&!n.missed&&d<=RULES.window+1e-9&&d<delta){best=n;delta=d;}}return best;}
  function dodgeable(attack,t){return !attack.done&&t>=attack.time-RULES.dodgeWindow&&t<=attack.time+.1;}
  function laneAt(clientX,left,width){return Math.max(0,Math.min(3,Math.floor((clientX-left)/Math.max(1,width)*4)));}
- const api={RULES,judge,candidate,dodgeable,laneAt};root.Rhythm=api;if(typeof module!=='undefined')module.exports=api;
+ class Clock{constructor(audio,origin,offset=0){this.audio=audio;this.origin=origin;this.offset=offset;}time(){let time=this.audio.currentTime;if(this.audio.state==='running'&&this.audio.getOutputTimestamp&&typeof performance!=='undefined'){const s=this.audio.getOutputTimestamp();if(s.performanceTime>0)time=Math.min(time,s.contextTime+Math.max(0,performance.now()-s.performanceTime)/1000);}return time-this.origin+this.offset/1000;}beat(bpm){return this.time()*bpm/60;}}
+ function unlock(progress,difficulty,completed){if(completed!==3)return progress;return{...progress,freeplay:true,secret:!!progress.secret||difficulty==='insane'};}
+ function validateChart(c){if(!c||!Number.isFinite(c.duration)||c.duration<=0||!(c.bpm>0)||!Array.isArray(c.notes))throw Error('Mapa inválido: duração, BPM ou notas.');const ids=new Set();let previous=-Infinity;for(const n of c.notes){if(!Number.isFinite(n.time)||n.time<0||n.time>=c.duration||n.time<previous||n.time+n.hold>c.duration||!Number.isFinite(n.hold)||n.hold<0||!Number.isInteger(n.lane)||n.lane<0||n.lane>3||!['player','enemy'].includes(n.side))throw Error('Mapa inválido: nota fora da grade.');const id=n.id||`${n.side}:${n.time}:${n.lane}`;if(ids.has(id))throw Error('Mapa inválido: nota duplicada.');ids.add(id);previous=n.time;}for(const t of c.attacks||[])if(!Number.isFinite(t)||t<0||t>c.duration)throw Error('Mapa inválido: evento fora da música.');return c;}
+ const api={RULES,judge,candidate,dodgeable,laneAt,Clock,unlock,validateChart};root.Rhythm=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

@@ -17,3 +17,27 @@ assert.deepEqual([0,97,98,194,195,291,292,390].map(x=>laneAt(x,0,390)),[0,0,1,1,
 assert.equal(laneAt(35,30,400),0);
 assert.equal(laneAt(435,30,400),3);
 console.log('Timing, julgamento, notas duplicadas e esquiva: OK');
+const engine=require('../static/engine.js');
+for(const sign of [-1,1]){
+  assert.equal(judge(sign*.045),'SICK!!');
+  assert.equal(judge(sign*.0451),'GOOD!');
+  assert.equal(judge(sign*.09),'GOOD!');
+  assert.equal(judge(sign*.0901),'BAD');
+  assert.equal(judge(sign*.13),'BAD');
+  assert.equal(judge(sign*.1301),'SHIT');
+  assert.equal(judge(sign*.16),'SHIT');
+  assert.equal(judge(sign*.1601),'MISS');
+}
+const nearby=[{side:'player',lane:0,time:1},{side:'player',lane:0,time:1.12}];
+assert.equal(candidate(nearby,0,1.1),nearby[1]);
+assert.equal(candidate(nearby,0,.84),nearby[0]);
+assert.equal(candidate(nearby,0,.8399),undefined);
+assert.equal(engine.unlock({},'insane',2).secret,undefined);
+assert.equal(JSON.stringify(engine.unlock({},'hard',3)),JSON.stringify({freeplay:true,secret:false}));
+assert.equal(JSON.stringify(engine.unlock({},'insane',3)),JSON.stringify({freeplay:true,secret:true}));
+const clockAudio={currentTime:10,state:'suspended'},clock=new engine.Clock(clockAudio,2,50);
+assert.equal(clock.time(),8.05);
+assert.equal(clock.time(),8.05);
+clockAudio.currentTime=11;assert.equal(clock.time(),9.05);
+assert.throws(()=>engine.validateChart({bpm:120,duration:2,notes:[{time:3,hold:0,lane:0,side:'player'}]}));
+console.log('Nearest-note, boundaries, clock and unlocks: OK');
