@@ -1,5 +1,5 @@
 const assert = require('node:assert/strict');
-const {RULES,judge,candidate,dodgeable} = require('../static/engine.js');
+const {RULES,judge,candidate,dodgeable,laneAt} = require('../static/engine.js');
 assert.equal(judge(.03),'SICK!!');
 assert.equal(judge(-.08),'GOOD!');
 assert.equal(judge(.12),'BAD');
@@ -13,4 +13,7 @@ assert.equal(dodgeable({time:10},9.4),true);
 assert.equal(dodgeable({time:10},9.1),false);
 assert.equal(dodgeable({time:10,done:true},10),false);
 assert.equal(dodgeable({time:10},10.2),false);
+assert.deepEqual([0,97,98,194,195,291,292,390].map(x=>laneAt(x,0,390)),[0,0,1,1,2,2,2,3]);
+assert.equal(laneAt(35,30,400),0);
+assert.equal(laneAt(435,30,400),3);
 console.log('Timing, julgamento, notas duplicadas e esquiva: OK');

@@ -6,6 +6,12 @@ LEVELS = [
     dict(id=3, name='CRASHOUT', subtitle='Sem filtro. Sem freio. Sem piedade.', bpm=190, bars=32, speed=530, anger='FORA DE CONTROLE', color='#ff4a6c'),
 ]
 PHRASES = [[0,2,1,3,2,0,3,1], [0,0,2,3,1,2,3,0], [3,2,1,0,1,3,0,2], [0,1,2,1,3,2,0,3]]
+MELODIES = [
+    [0,3,7,10,7,5,3,2,0,2,3,7],
+    [7,10,12,10,7,5,3,5,7,5,3,0],
+    [3,5,7,12,10,7,5,3,2,3,5,7],
+    [10,7,5,3,5,7,3,2,0,2,3,0],
+]
 def make_chart(level):
     meta = LEVELS[level-1]
     beat = 60 / meta['bpm']
@@ -25,7 +31,12 @@ def make_chart(level):
         for step, grid in enumerate(rhythm):
             lane = (phrase[step % 8] * reverse + shift) % 4
             sustain = beat * .55 if step == len(rhythm)-1 and bar % 4 == 3 else 0
-            n = dict(time=round((4+bar*4+grid/4)*beat,5), lane=lane, side=side, hold=round(sustain,5), pitch=(lane+[0,3,5,7][bar//4%4]+(12 if bar%8>=6 else 0)))
+            melody = MELODIES[(bar//4 + level-1) % len(MELODIES)]
+            # Rival calls and player answers share an actual melodic phrase.
+            # Lanes may vary without scrambling the melody into random pitches.
+            target = melody[(step + (4 if bar%2 else 0)) % len(melody)] + [0,-4,3,-2][bar//4%4]
+            pitch = min((p for p in range(-12,25) if p%12 in (0,2,3,5,7,8,10)), key=lambda p:abs(p-target))
+            n = dict(time=round((4+bar*4+grid/4)*beat,5), lane=lane, side=side, hold=round(sustain,5), pitch=pitch)
             notes.append(n)
             if level >= 2 and bar >= 8 and step in (2,6) and rng.random() < (.35 if level == 2 else .7):
                 notes.append(dict(n, lane=(lane+2)%4, hold=0, pitch=n['pitch']+7))

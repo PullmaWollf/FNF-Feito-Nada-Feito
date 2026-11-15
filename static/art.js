@@ -4,7 +4,7 @@ window.Art=(()=>{
  function path(c,points,fill,stroke=ink,width=7){c.beginPath();points.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();c.fillStyle=fill;c.fill();if(stroke){c.strokeStyle=stroke;c.lineWidth=width;c.lineJoin='round';c.stroke();}}
  function ellipse(c,x,y,rx,ry,fill,stroke=ink,w=6){c.beginPath();c.ellipse(x,y,rx,ry,0,0,7);c.fillStyle=fill;c.fill();if(stroke){c.lineWidth=w;c.strokeStyle=stroke;c.stroke();}}
  function mic(c,x,y,angle=0){c.save();c.translate(x,y);c.rotate(angle);path(c,[[-6,0],[6,0],[7,44],[-5,44]],'#454051',ink,4);ellipse(c,0,-4,16,20,'#83818e',ink,5);c.strokeStyle='#34303e';c.lineWidth=2;for(let i=-10;i<=8;i+=6){c.beginPath();c.moveTo(-12,i);c.lineTo(12,i);c.stroke();}c.restore();}
- function character(c,x,y,s,enemy=false,anger=0,pose=0,dodge=false,attack=false,sing=-1){c.save();c.translate(x,y);c.scale(s,s);c.translate(0,Math.sin(pose)*5);if(sing>=0){c.translate([-15,0,2,17][sing],[0,20,-17,0][sing]);c.rotate([-.12,.06,-.07,.12][sing]);}if(dodge){c.translate(17,40);c.rotate(.3);}ellipse(c,0,153,83,13,'#09071188',null);
+ function character(c,x,y,s,enemy=false,anger=0,pose=0,dodge=false,attack=false,sing=-1,damaged=false){c.save();c.translate(x,y);c.scale(s,s);c.translate(0,Math.sin(pose)*5);if(damaged){c.translate(8,13);c.rotate(-.16);}if(sing>=0){c.translate([-15,0,2,17][sing],[0,20,-17,0][sing]);c.rotate([-.12,.06,-.07,.12][sing]);}if(dodge){c.translate(17,40);c.rotate(.3);}ellipse(c,0,153,83,13,'#09071188',null);
  if(enemy){
  path(c,[[-44,70],[-48,134],[-76,144],[-73,158],[-10,155],[0,93],[18,145],[11,158],[76,158],[81,143],[50,128],[43,66]],'#302b45');
  path(c,[[-43,-14],[-64,9],[-60,77],[12,92],[48,72],[39,-16],[8,-31]],anger>1?'#951f4e':'#753c8b');
@@ -25,9 +25,9 @@ window.Art=(()=>{
  path(c,[[-39,7],[-66,23],[-55,52],[-29,37]],'#f9f5ed');ellipse(c,-60,46,15,15,'#f4c8b4');
  path(c,[[30,7],[57,13],[69,37],[49,52],[27,35]],'#f9f5ed');ellipse(c,61,39,17,17,'#f4c8b4');mic(c,74,6,.35);
  path(c,[[-34,-79],[-48,-43],[-31,-8],[11,6],[38,-19],[39,-70],[3,-95]],'#f2c5ad');
- path(c,[[-49,-48],[-69,-62],[-42,-71],[-61,-91],[-27,-88],[-14,-116],[4,-94],[36,-92],[49,-61],[29,-66],[15,-39],[-2,-60],[-21,-36],[-18,-62],[-37,-40]],'#47d5ed');
+ path(c,[[-49,-48],[-69,-62],[-42,-71],[-61,-91],[-27,-88],[-14,-116],[4,-94],[36,-92],[49,-61],[29,-66],[15,-39],[-2,-60],[-21,-36],[-18,-62],[-37,-40]],damaged?'#7a81a7':'#47d5ed');
  path(c,[[-49,-90],[-38,-115],[13,-120],[39,-101],[48,-78],[-9,-86],[-33,-75]],'#ed4566');path(c,[[-29,-94],[-58,-85],[-70,-73],[-26,-69],[15,-82]],'#ed4566');
- c.strokeStyle=ink;c.lineWidth=6;c.beginPath();c.moveTo(-16,-35);c.lineTo(-8,-22);c.moveTo(14,-40);c.lineTo(20,-28);c.moveTo(-1,-13);c.lineTo(19,-16);c.stroke();if(sing>=0)ellipse(c,8,-12,11,9,'#742442',ink,4);
+ c.strokeStyle=ink;c.lineWidth=6;c.beginPath();if(damaged){c.moveTo(-23,-32);c.lineTo(-7,-23);c.moveTo(-20,-21);c.lineTo(-10,-34);c.moveTo(10,-35);c.lineTo(26,-25);c.moveTo(12,-24);c.lineTo(23,-37);c.moveTo(-3,-7);c.lineTo(2,-12);c.lineTo(9,-6);c.lineTo(16,-12);}else{c.moveTo(-16,-35);c.lineTo(-8,-22);c.moveTo(14,-40);c.lineTo(20,-28);c.moveTo(-1,-13);c.lineTo(19,-16);}c.stroke();if(sing>=0)ellipse(c,8,-12,11,9,'#742442',ink,4);
  }c.restore();}
  function speaker(c,x,y,s=1){c.save();c.translate(x,y);c.scale(s,s);path(c,[[-62,-115],[61,-115],[67,100],[-67,100]],'#332d43');for(const cy of [-58,46]){ellipse(c,0,cy,46,43,'#16121e');ellipse(c,0,cy,24,23,'#51455d');ellipse(c,-6,cy-5,13,12,'#262032',null);}c.restore();}
  function stage(c,w,h,anger=0,t=0){const g=c.createLinearGradient(0,0,0,h);g.addColorStop(0,anger===2?'#361125':'#21162f');g.addColorStop(1,'#43304e');c.fillStyle=g;c.fillRect(0,0,w,h);c.strokeStyle='#5d3e6755';c.lineWidth=2;for(let y=70;y<h*.74;y+=54){c.beginPath();c.moveTo(0,y);c.lineTo(w,y);c.stroke();for(let x=(y%108?0:90);x<w;x+=180){c.beginPath();c.moveTo(x,y);c.lineTo(x,y+54);c.stroke();}}
@@ -37,7 +37,7 @@ window.Art=(()=>{
  // Cached sprite atlases: idle, four singing directions, dodge and attack;
  // two drawn frames per pose. Input selects a pose without redrawing the artwork.
  const atlases=new Map();
- function atlas(enemy,anger){const key=`${enemy}:${anger}`;if(atlases.has(key))return atlases.get(key);const sheet=document.createElement('canvas');sheet.width=280*14;sheet.height=360;const a=sheet.getContext('2d');for(let pose=0;pose<7;pose++){for(let frame=0;frame<2;frame++){a.save();a.translate((pose*2+frame)*280,0);character(a,140,180,1,enemy,anger,frame?Math.PI/2:Math.PI*1.5,pose===5,pose===6,pose>=1&&pose<=4?pose-1:-1);a.restore();}}atlases.set(key,sheet);return sheet;}
- function sprite(c,x,y,s,enemy,anger,t,bpm,last,dodge,attack){let lane=-1,latest=-Infinity;for(let i=0;i<4;i++)if(last[i]>latest){latest=last[i];lane=i;}const singing=t-latest<.21;let pose=attack?6:dodge?5:singing?lane+1:0;const frame=Math.floor(t*bpm/60*2)%2;const sheet=atlas(enemy,anger);c.drawImage(sheet,(pose*2+Math.abs(frame))*280,0,280,360,x-140*s,y-180*s,280*s,360*s);}
+ function atlas(enemy,anger){const key=`${enemy}:${anger}`;if(atlases.has(key))return atlases.get(key);const sheet=document.createElement('canvas');sheet.width=280*16;sheet.height=360;const a=sheet.getContext('2d');for(let pose=0;pose<8;pose++){for(let frame=0;frame<2;frame++){a.save();a.translate((pose*2+frame)*280,0);character(a,140,180,1,enemy,anger,frame?Math.PI/2:Math.PI*1.5,pose===5,pose===6,pose>=1&&pose<=4?pose-1:-1,pose===7);a.restore();}}atlases.set(key,sheet);return sheet;}
+ function sprite(c,x,y,s,enemy,anger,t,bpm,last,dodge,attack,damaged=false){let lane=-1,latest=-Infinity;for(let i=0;i<4;i++)if(last[i]>latest){latest=last[i];lane=i;}const singing=t-latest<.21;let pose=damaged?7:attack?6:dodge?5:singing?lane+1:0;const frame=Math.floor(t*bpm/60*2)%2;const sheet=atlas(enemy,anger);c.drawImage(sheet,(pose*2+Math.abs(frame))*280,0,280,360,x-140*s,y-180*s,280*s,360*s);}
  addEventListener('resize',poster);document.fonts.ready.then(poster);return{character,sprite,stage,speaker,mic,poster};
 })();

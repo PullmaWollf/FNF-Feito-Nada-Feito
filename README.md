@@ -23,7 +23,7 @@ Abra http://127.0.0.1:8000 . Para celular na mesma rede, configure `ALLOWED_HOST
 
 **D/F/J/K**, da esquerda para a direita. As orientações são **esquerda / baixo / cima / direita (EBCD)**, nessa ordem. As notas e receptores são bolinhas coloridas. Segure as notas com cauda. **Espaço** desvia na fase final: o aviso aparece 800 ms antes, três beeps alertam e a esquiva aceita a entrada nos últimos 650 ms antes do golpe até 100 ms depois. Um acerto de microfone remove 40% de uma unidade de vida; errar notas também reduz a vida. **Esc** pausa; ao sair da aba o jogo pausa automaticamente.
 
-No celular, use os quatro botões e **DESVIAR**. Há detecção automática de tela/toque e escolha manual em **Como jogar**, além de ajuste de áudio de -200 a +200 ms. O som começa após clicar em uma fase. Os recordes ficam neste navegador, via localStorage. Todas as fases ficam disponíveis no menu; após vencer, é possível seguir para a próxima.
+No celular, as notas usam **downscroll**: descem até os receptores na parte inferior. Toque em qualquer altura de cada quarto da tela para acertar **esquerda / baixo / cima / direita**. Dois dedos simultâneos e notas longas são aceitos. **DESVIAR** fica separado embaixo. Há detecção automática de tela/toque e escolha manual em **Como jogar**, além de ajuste de áudio de -200 a +200 ms. O som começa após clicar em uma fase. Os recordes ficam neste navegador, via localStorage. Todas as fases ficam disponíveis no menu; após vencer, é possível seguir para a próxima.
 
 ## Arquitetura
 
@@ -31,10 +31,10 @@ No celular, use os quatro botões e **DESVIAR**. Há detecção automática de t
 - `game/views.py`: página e endpoints `/api/levels/`, `/api/charts/1/` até `/3/`.
 - `static/game.js`: relógio de áudio, trilha sintetizada, input, vida, combo, julgamento, pausa e resultados.
 - `static/engine.js`: regras puras de timing e esquiva.
-- `static/art.js`: arte vetorial própria dos personagens e do palco. Atlas de sprites em memória com 14 quadros: idle, quatro poses de canto, esquiva e ataque.
+- `static/art.js`: arte vetorial própria dos personagens e do palco. Atlas de sprites em memória com 16 quadros: idle, quatro poses de canto, esquiva, ataque e dano.
 - `templates/index.html` e `static/style.css`: menu, dialogs e layouts responsivos.
 
-O relógio mestre é `AudioContext.currentTime`. Pausar suspende áudio e tempo simultaneamente. A trilha usa baixo, bateria sintetizada, acordes e vozes eletrônicas em resposta aos mapas. Sem arquivo de áudio externo ou chaves de API. Bootstrap está incluído; fontes Google são opcionais, com fallback local.
+O relógio mestre usa o timestamp de saída de áudio quando disponível, com fallback para `AudioContext.currentTime`. O contexto pede baixa latência. O áudio é agendado a cada 25 ms com horizonte de 180 ms, os buffers de bateria são reutilizados e os nós encerrados são desconectados. O palco é rasterizado uma vez por resolução/fase, o canvas usa resolução limitada conforme o dispositivo e apenas notas próximas entram na renderização. Pausar suspende áudio e tempo simultaneamente. A trilha usa baixo, bateria sintetizada com viradas e acordes. As vozes passam por três formantes de vogais, com envelopes e transições de afinação; frases melódicas de chamada e resposta seguem a tonalidade de dó menor. A voz do jogador só soa ao acertar uma nota. Erros de nota e ataques ativam o sprite de dano por 380 ms, acompanhados de um baixo desafinado descendente; o efeito sonoro tem limite de repetição para evitar sobreposição excessiva. Sem arquivo de áudio externo ou chaves de API. Bootstrap está incluído; fontes Google são opcionais, com fallback local.
 
 ## Verificação
 
