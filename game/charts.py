@@ -1,9 +1,9 @@
 """Seeded phrase arrangements with syncopation, variations and final-stage bursts."""
 import random
 LEVELS = [
-    dict(id=1, name='Pavio Curto', subtitle='Todo mundo tem um limite.', bpm=128, bars=56, speed=401, anger='IRRITADO', color='#c3f451'),
-    dict(id=2, name='Pressão Alta', subtitle='Você está testando a paciência dele.', bpm=158, bars=68, speed=513, anger='FURIOSO', color='#ffac45'),
-    dict(id=3, name='CRASHOUT', subtitle='Sem filtro. Sem freio. Sem piedade.', bpm=190, bars=80, speed=625, anger='FORA DE CONTROLE', color='#ff4a6c'),
+    dict(id=1, name='Pavio Curto', subtitle='Todo mundo tem um limite.', bpm=128, bars=56, speed=460, anger='IRRITADO', color='#c3f451'),
+    dict(id=2, name='Pressão Alta', subtitle='Você está testando a paciência dele.', bpm=158, bars=68, speed=590, anger='FURIOSO', color='#ffac45'),
+    dict(id=3, name='CRASHOUT', subtitle='Sem filtro. Sem freio. Sem piedade.', bpm=190, bars=80, speed=720, anger='FORA DE CONTROLE', color='#ff4a6c'),
 ]
 PHRASES = [[0,2,1,3,2,0,3,1], [0,0,2,3,1,2,3,0], [3,2,1,0,1,3,0,2], [0,1,2,1,3,2,0,3]]
 MELODIES = [
@@ -57,8 +57,13 @@ def make_chart(level, difficulty='hard'):
             for i,n in enumerate(sequence):
                 if i%3==0:
                     extra.append(dict(n,lane=(n['lane']+2)%4,hold=0))
-                if i+1<len(sequence) and sequence[i+1]['time']-n['time'] > beat*.35 and not n['hold']:
-                    extra.append(dict(n,time=round(n['time']+beat*.25,5),lane=(n['lane']+1)%4,hold=0))
+                # Sparse intermediate taps; most avoid repeating the next lane.
+                # Chords above remain simultaneous notes in different lanes.
+                if i%4==1 and i+1<len(sequence) and sequence[i+1]['time']-n['time'] > beat*.35 and not n['hold']:
+                    lane = (n['lane']+1)%4
+                    if i%12!=1 and lane==sequence[i+1]['lane']:
+                        lane=(lane+1)%4
+                    extra.append(dict(n,time=round(n['time']+beat*.25,5),lane=lane,hold=0))
         notes += extra
     notes = sorted({(n['side'],n['time'],n['lane']):n for n in notes}.values(),key=lambda n:n['time'])
     for i,n in enumerate(notes):

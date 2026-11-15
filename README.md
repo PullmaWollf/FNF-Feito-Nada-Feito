@@ -68,3 +68,7 @@ Referência solicitada: https://gamebanana.com/games/8694 . Friday Night Funkin�
 Cada música tem seleção Easy, Medium, Hard e Insane à direita. Easy mantém aproximadamente 25% das notas, Medium 50%, Hard usa o mapa cheio e Insane acrescenta notas intermediárias e acordes de duas notas. A trilha vocal e instrumental é independente do mapa: tonalidade, BPM, duração, velocidade e ataques permanecem iguais entre dificuldades. Os recordes são separados por música e dificuldade.
 
 As faixas agora duram aproximadamente 1:48, 1:46 e 1:43. Receptores e notas dos dois lados foram ampliados; a velocidade de subida aumentou 18%. O mobile continua em downscroll com quatro faixas inteiras de toque.
+
+### Ajuste de scroll e duplas
+
+Scrollspeed é a velocidade de deslocamento, independente da densidade: 460 / 590 / 720 unidades por segundo no computador. No celular, a área útil é percorrida em cerca de 1,15 s. O Insane mantém acordes simultâneos em lanes diferentes a cada três notas-base; as inserções intermediárias ficam restritas a uma em cada quatro oportunidades, com menos repetições rápidas na mesma lane. A trilha e a duração permanecem iguais.
