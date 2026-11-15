@@ -1,0 +1,16 @@
+const assert = require('node:assert/strict');
+const {RULES,judge,candidate,dodgeable} = require('../static/engine.js');
+assert.equal(judge(.03),'SICK!!');
+assert.equal(judge(-.08),'GOOD!');
+assert.equal(judge(.12),'BAD');
+const notes=[{side:'enemy',lane:0,time:1},{side:'player',lane:0,time:1},{side:'player',lane:1,time:1}];
+assert.equal(candidate(notes,0,1),notes[1]);
+notes[1].hit=true;
+assert.equal(candidate(notes,0,1),undefined);
+assert.equal(candidate(notes,1,1.3),undefined);
+assert.equal(candidate(notes,1,.9),notes[2]);
+assert.equal(dodgeable({time:10},9.4),true);
+assert.equal(dodgeable({time:10},9.1),false);
+assert.equal(dodgeable({time:10,done:true},10),false);
+assert.equal(dodgeable({time:10},10.2),false);
+console.log('Timing, julgamento, notas duplicadas e esquiva: OK');

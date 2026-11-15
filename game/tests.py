@@ -1,0 +1,45 @@
+from django.test import SimpleTestCase
+from .charts import make_chart
+
+class ChartTests(SimpleTestCase):
+    def test_progressive_density_and_speed(self):
+        charts = [make_chart(i) for i in range(1, 4)]
+        density = [len(c['notes']) / c['duration'] for c in charts]
+        self.assertLess(density[0], density[1])
+        self.assertLess(density[1], density[2])
+        self.assertEqual([c['bpm'] for c in charts], [128,158,190])
+
+    def test_charts_are_playable_and_deterministic(self):
+        for level in range(1, 4):
+            c = make_chart(level)
+            self.assertEqual(c, make_chart(level))
+            self.assertEqual(c['notes'], sorted(c['notes'], key=lambda n:n['time']))
+            self.assertEqual({n['side'] for n in c['notes']}, {'enemy','player'})
+            self.assertTrue(any(n['hold'] for n in c['notes']))
+            seen = set()
+            for n in c['notes']:
+                self.assertIn(n['lane'], range(4))
+                self.assertLess(n['time']+n['hold'], c['duration'])
+                key = (n['side'], n['time'], n['lane'])
+                self.assertNotIn(key, seen)
+                seen.add(key)
+            # Sustains must finish before another note in the same lane.
+            for n in c['notes']:
+                if n['hold']:
+                    self.assertFalse(any(m['side']==n['side'] and m['lane']==n['lane'] and n['time']<m['time']<n['time']+n['hold'] for m in c['notes']))
+
+    def test_attacks_only_in_final_and_spaced(self):
+        self.assertEqual(make_chart(1)['attacks'], [])
+        self.assertEqual(make_chart(2)['attacks'], [])
+        c = make_chart(3)
+        self.assertGreaterEqual(len(c['attacks']), 8)
+        for a,b in zip(c['attacks'],c['attacks'][1:]):
+            self.assertGreater(b-a, 2)
+
+    def test_routes_and_invalid_levels(self):
+        self.assertContains(self.client.get('/'), 'PONTO DE')
+        self.assertEqual(len(self.client.get('/api/levels/').json()['levels']),3)
+        for i in range(1,4):
+            self.assertEqual(self.client.get(f'/api/charts/{i}/').json(),make_chart(i))
+        self.assertEqual(self.client.get('/api/charts/4/').status_code,404)
+        self.assertEqual(self.client.get('/api/charts/0/').status_code,404)

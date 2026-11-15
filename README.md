@@ -31,7 +31,7 @@ No celular, use os quatro botões e **DESVIAR**. Há detecção automática de t
 - `game/views.py`: página e endpoints `/api/levels/`, `/api/charts/1/` até `/3/`.
 - `static/game.js`: relógio de áudio, trilha sintetizada, input, vida, combo, julgamento, pausa e resultados.
 - `static/engine.js`: regras puras de timing e esquiva.
-- `static/art.js`: arte vetorial própria dos personagens e do palco.
+- `static/art.js`: arte vetorial própria dos personagens e do palco. Atlas de sprites em memória com 14 quadros: idle, quatro poses de canto, esquiva e ataque.
 - `templates/index.html` e `static/style.css`: menu, dialogs e layouts responsivos.
 
 O relógio mestre é `AudioContext.currentTime`. Pausar suspende áudio e tempo simultaneamente. A trilha usa baixo, bateria sintetizada, acordes e vozes eletrônicas em resposta aos mapas. Sem arquivo de áudio externo ou chaves de API. Bootstrap está incluído; fontes Google são opcionais, com fallback local.
