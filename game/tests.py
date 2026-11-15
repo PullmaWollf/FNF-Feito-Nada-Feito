@@ -2,6 +2,22 @@ from django.test import SimpleTestCase
 from .charts import make_chart
 
 class ChartTests(SimpleTestCase):
+    def test_difficulties_share_music_and_duration(self):
+        for level in range(1,4):
+            charts=[make_chart(level,d) for d in ('easy','medium','hard','insane')]
+            counts=[len(c['notes']) for c in charts]
+            self.assertEqual(counts,sorted(set(counts)))
+            for c in charts:
+                self.assertEqual(c['music'],charts[0]['music'])
+                self.assertEqual(c['duration'],charts[0]['duration'])
+                self.assertEqual(c['bpm'],charts[0]['bpm'])
+                self.assertEqual(c['speed'],charts[0]['speed'])
+                self.assertEqual(c['attacks'],charts[0]['attacks'])
+                self.assertGreater(c['duration'],100)
+            player= [n for n in charts[-1]['notes'] if n['side']=='player']
+            self.assertLess(len({n['time'] for n in player}),len(player))
+        self.assertEqual(self.client.get('/api/charts/1/?difficulty=wrong').status_code,400)
+
     def test_progressive_density_and_speed(self):
         charts = [make_chart(i) for i in range(1, 4)]
         density = [len(c['notes']) / c['duration'] for c in charts]

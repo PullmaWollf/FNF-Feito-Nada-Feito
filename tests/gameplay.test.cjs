@@ -35,7 +35,7 @@ function harness(mobile=false){
   assert.match(game.get('#result-kicker').textContent,/CONFRONTO ENCERRADO/);
   assert.match(game.get('#result-stats').innerHTML,/100.0%/);
   assert.match(game.get('#result-stats').innerHTML,/ERROS<b>0/);
-  assert.ok(game.storage.has('ruptura-best'));
+  assert.ok(game.storage.has('ruptura-best-v2'));
  }
  const game=harness();await game.ready();await game.levels[2].onclick();
  game.get('#pause-button').onclick();assert.equal(game.get('#result-title').textContent,'RESPIRA.');
@@ -43,6 +43,6 @@ function harness(mobile=false){
  for(let t=0;t<25;t+=.1)game.tick(t);
  assert.equal(game.get('#result-title').textContent,'PERDEU O COMPASSO.');
  const damage=harness();await damage.ready();await damage.levels[0].onclick();const missed=charts[0].notes.find(n=>n.side==='player');damage.tick(missed.time+.2);assert.ok(damage.draws.some(args=>args.length===9&&args[1]>=3920),'A missed note must select the damage sprite');
- const mobile=harness(true);await mobile.ready();await mobile.levels[0].onclick();const first=charts[0].notes.find(n=>n.side==='player');const x=90+first.lane*180;const noteY=()=>Math.max(...mobile.circles.filter(p=>Math.abs(p.x-x)<1&&Math.abs(p.r-32)<1).map(p=>p.y).filter(y=>y<1360));mobile.tick(first.time-.3);const before=noteY();mobile.tick(first.time-.1);const after=noteY();assert.ok(after>before,'Mobile notes must descend toward the receptor');
+ const mobile=harness(true);await mobile.ready();await mobile.levels[0].onclick();const first=charts[0].notes.find(n=>n.side==='player');const x=90+first.lane*180;const noteY=()=>Math.max(...mobile.circles.filter(p=>Math.abs(p.x-x)<1&&Math.abs(p.r-38.4)<1).map(p=>p.y).filter(y=>y<1360));mobile.tick(first.time-.3);const before=noteY();mobile.tick(first.time-.1);const after=noteY();assert.ok(after>before,'Mobile notes must descend toward the receptor');
  console.log('Desktop/mobile: fases perfeitas, downscroll, toque por faixa, sustentações, esquiva, sprite de dano, pausa e recordes: OK');
 })().catch(e=>{console.error(e);process.exitCode=1;});
