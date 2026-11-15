@@ -67,9 +67,12 @@ class ChartTests(SimpleTestCase):
             for difficulty in ('easy','medium','hard','insane'):
                 self.assertGreater(validate(make_chart(level,difficulty)),0)
         secret=make_chart(4,'insane')
-        duet=secret['duet_start']
         notes=secret['notes']
-        first=sum(1 for n in notes if n['time']<20)
-        last=sum(1 for n in notes if duet<n['time']<duet+20)
+        intro=secret['count_in']
+        first=sum(1 for n in notes if intro<=n['time']<intro+20)
+        last=sum(1 for n in notes if intro+60<=n['time']<intro+80)
         self.assertGreater(last,first)
-        self.assertEqual({n['side'] for n in notes if n['time']>duet},{'player','enemy'})
+        self.assertEqual(secret['player'],'cartman')
+        self.assertEqual(secret['opponent'],'kyle')
+        self.assertTrue(secret['audio_url'].endswith('.mp3'))
+        self.assertGreater(len(secret['subtitles']),20)

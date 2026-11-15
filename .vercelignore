@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+*.zip
+docs/*.jpg
+tools/
+game/supplied_transcript*.json

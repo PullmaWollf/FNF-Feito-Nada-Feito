@@ -4,7 +4,10 @@ from .charts import LEVELS, SECRET, DIFFICULTIES, make_chart
 def index(request):
     return render(request, 'index.html')
 def levels(request):
-    return JsonResponse({'levels': LEVELS,'secret':SECRET})
+    secret_chart=make_chart(4,'hard')
+    secret={key:secret_chart[key] for key in SECRET}
+    secret['duration']=secret_chart['duration']
+    return JsonResponse({'levels': LEVELS,'secret':secret})
 def chart(request, level):
     if not 1 <= level <= 4:
         raise Http404

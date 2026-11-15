@@ -1,0 +1,2769 @@
+{
+  "audio_duration": 97.1523125,
+  "bpm": 157.89,
+  "notes": [
+    {
+      "time": 0.0,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 0.4,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 0.84,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 1.04,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 1.2,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 1.46,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 1.63,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 1.87,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 2.15,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 2.52,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 3.02,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 3.28,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 3.59,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 3.72,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 3.88,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 4.1,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 4.22,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 4.52,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 4.76,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 5.0,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 5.32,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 5.62,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 5.76,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 6.0,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 6.3,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 6.42,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 6.66,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 6.85,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 7.0,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 7.41,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 7.73,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 7.96,
+      "side": "enemy",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 8.18,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 8.34,
+      "side": "enemy",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 10.14,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 10.62,
+      "side": "enemy",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 10.84,
+      "side": "enemy",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 11.04,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 11.22,
+      "side": "enemy",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 11.41,
+      "side": "enemy",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 13.66,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 14.16,
+      "side": "enemy",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 14.48,
+      "side": "enemy",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 14.7,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 15.36,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 16.78,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 16.98,
+      "side": "enemy",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 17.14,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 17.28,
+      "side": "enemy",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 17.5,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 17.68,
+      "side": "enemy",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 17.86,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 18.1,
+      "side": "enemy",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 18.26,
+      "side": "enemy",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 18.6,
+      "side": "enemy",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 18.78,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 19.14,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 19.34,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 19.89,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 20.14,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 20.59,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 20.86,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 21.11,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 21.38,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 21.66,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 21.98,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 22.23,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 22.4,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 22.6,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 22.84,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 23.03,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 23.37,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 23.57,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 23.75,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 23.88,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 24.13,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 24.32,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 24.68,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 24.91,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 26.11,
+      "side": "enemy",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 26.38,
+      "side": "enemy",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 26.53,
+      "side": "enemy",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 26.7,
+      "side": "enemy",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 27.18,
+      "side": "enemy",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 28.02,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 28.21,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 28.4,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 28.7,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 29.01,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 29.27,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 29.53,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 29.72,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 29.9,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 30.12,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 30.28,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 30.49,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 30.72,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 30.91,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 31.04,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 31.22,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 31.44,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 31.58,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 31.81,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 32.02,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 32.4,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 32.58,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 32.76,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 32.96,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 33.18,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 33.34,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 33.59,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 34.13,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 34.29,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 34.59,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 35.64,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 35.86,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 36.0,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 36.23,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 36.41,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 36.66,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 37.55,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 37.75,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 37.92,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 38.52,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 38.79,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 39.09,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 39.29,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 39.5,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 39.76,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 40.03,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 40.19,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 40.49,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 40.71,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 40.96,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 41.22,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 41.4,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 41.57,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 41.97,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 42.14,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 42.33,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 42.55,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 42.86,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 43.13,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 43.75,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 44.22,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 44.41,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 44.6,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 44.79,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 45.15,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 45.27,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 45.41,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 45.7,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 45.91,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 46.04,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 46.76,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 47.01,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 47.14,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 47.39,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 48.01,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 48.36,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 48.76,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 48.92,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 49.04,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 49.35,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 49.77,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 50.06,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 50.3,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 50.44,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 50.64,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 50.8,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 50.93,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 51.16,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 51.46,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 51.65,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 51.84,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 52.0,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 52.32,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 54.07,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 54.26,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 54.38,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 54.56,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 54.7,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 54.84,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 55.04,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 55.23,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 55.41,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 55.62,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 55.84,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 56.01,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 56.18,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 56.32,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 56.47,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 56.61,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 56.77,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 56.96,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 57.09,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 57.32,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 57.52,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 57.7,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 57.83,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 58.1,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 58.27,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 58.45,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 58.58,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 58.84,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 59.05,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 59.28,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 59.6,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 59.78,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 59.99,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 60.27,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 60.42,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 60.55,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 60.73,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 60.85,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 61.04,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 61.23,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 61.5,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 61.87,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 62.0,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 62.2,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 62.38,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 62.52,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 62.64,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 62.78,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 62.95,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 63.12,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 63.31,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 63.43,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 63.55,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 63.7,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 63.89,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 64.08,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 64.21,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 64.39,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 64.57,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 64.7,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 64.86,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 64.98,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 65.12,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 65.27,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 65.45,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 65.66,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 65.84,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 65.97,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 66.12,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 66.27,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 66.39,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 66.53,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 66.69,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 66.83,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 66.99,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 67.12,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 67.24,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 67.39,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 67.55,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 67.75,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 67.87,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 68.0,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 68.12,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 68.31,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 68.51,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 68.65,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 68.78,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 68.92,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 69.1,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 69.22,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 69.38,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 69.52,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 69.65,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 69.86,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 70.05,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 70.23,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 70.41,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 70.59,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 70.75,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 70.88,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 71.01,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 71.13,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 71.26,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 71.39,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 71.55,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 71.74,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 71.92,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 72.12,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 72.3,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 72.48,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 72.61,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 72.73,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 72.87,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 73.03,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 73.25,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 73.37,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 73.56,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 74.0,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 74.15,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 74.34,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 74.57,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 74.73,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 74.85,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 75.09,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 75.33,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 75.49,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 75.67,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 75.88,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 76.0,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 76.24,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 76.38,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 76.7,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 76.95,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 77.27,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 77.46,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 77.59,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 77.82,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 78.06,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 78.26,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 78.39,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 78.51,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 78.64,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 78.79,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 78.96,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 79.09,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 79.26,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 79.41,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 79.71,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 79.94,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 80.47,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 80.6,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 80.72,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 80.84,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 81.05,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 81.19,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 81.31,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 81.63,
+      "side": "player",
+      "lane": 1,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 81.81,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 81.93,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 82.26,
+      "side": "player",
+      "lane": 2,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 82.4,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 82.55,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 82.67,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 82.8,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 82.94,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 83.07,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 83.2,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 83.33,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 83.49,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 83.64,
+      "side": "player",
+      "lane": 0,
+      "hold": 0,
+      "pitch": 0
+    },
+    {
+      "time": 83.84,
+      "side": "player",
+      "lane": 3,
+      "hold": 0,
+      "pitch": 0
+    }
+  ],
+  "subtitles": [
+    {
+      "start": 0.0,
+      "end": 2.16,
+      "text": "You guys, this is all Kyle's mom's",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 2.16,
+      "end": 2.31,
+      "text": "fault.",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 2.46,
+      "end": 3.14,
+      "text": "Shut up, Cartman!",
+      "speaker": "Kyle",
+      "automatic": true
+    },
+    {
+      "start": 3.28,
+      "end": 4.52,
+      "text": "Kyle's mom is the one that started",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 4.52,
+      "end": 6.3,
+      "text": "that damn club and all because she's",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 6.3,
+      "end": 7.74,
+      "text": "a big fat stupid b -",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 7.74,
+      "end": 8.68,
+      "text": "Don't say it, Cartman!",
+      "speaker": "Kyle",
+      "automatic": true
+    },
+    {
+      "start": 10.140000000000002,
+      "end": 10.56,
+      "text": "Wheeeee!",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 10.62,
+      "end": 11.68,
+      "text": "Don't do it, Cartman!",
+      "speaker": "Kyle",
+      "automatic": true
+    },
+    {
+      "start": 13.660000000000002,
+      "end": 14.08,
+      "text": "Wheeeee!",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 14.16,
+      "end": 15.02,
+      "text": "I'm warning you!",
+      "speaker": "Kyle",
+      "automatic": true
+    },
+    {
+      "start": 15.36,
+      "end": 16.2,
+      "text": "Okay okay...",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 16.78,
+      "end": 18.1,
+      "text": "I'm getting pretty sick of him calling",
+      "speaker": "Kyle",
+      "automatic": true
+    },
+    {
+      "start": 18.1,
+      "end": 18.6,
+      "text": "my mom -",
+      "speaker": "Kyle",
+      "automatic": true
+    },
+    {
+      "start": 18.6,
+      "end": 19.0,
+      "text": "Wheeeee!",
+      "speaker": "Kyle",
+      "automatic": true
+    },
+    {
+      "start": 19.1,
+      "end": 20.5,
+      "text": "Kyle's mom's a bitch, she's a big fat bitch",
+      "speaker": "Cartman",
+      "automatic": false
+    },
+    {
+      "start": 20.5,
+      "end": 21.98,
+      "text": "She's the biggest bitch in the whole wide world",
+      "speaker": "Cartman",
+      "automatic": false
+    },
+    {
+      "start": 23.3,
+      "end": 24.44,
+      "text": "bitch, he's a bitch who all the",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 24.44,
+      "end": 25.14,
+      "text": "boys ain't care",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 25.700000000000003,
+      "end": 27.44,
+      "text": "Shut your fucking mouth, Cartman!",
+      "speaker": "Kyle",
+      "automatic": true
+    },
+    {
+      "start": 28.04,
+      "end": 29.3,
+      "text": "I'm under she's a bitch, on she's",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 29.3,
+      "end": 30.26,
+      "text": "a bitch, and when it's day to",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 30.26,
+      "end": 31.22,
+      "text": "Saturday she's a bitch",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 31.22,
+      "end": 32.72,
+      "text": "Stayin' on Sunday just to be different,",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 32.76,
+      "end": 34.46,
+      "text": "she's a super king, come maya, maya,",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 34.56,
+      "end": 34.8,
+      "text": "bitch",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 35.64,
+      "end": 36.94,
+      "text": "C'mon you all know the word",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 36.94,
+      "end": 38.64,
+      "text": "Have you ever met my face? Cause",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 38.64,
+      "end": 39.56,
+      "text": "mom she's the biggest bitch",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 39.56,
+      "end": 40.56,
+      "text": "She's a whole wide girl, she's a",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 40.56,
+      "end": 41.12,
+      "text": "mean old bitch",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 41.12,
+      "end": 42.12,
+      "text": "And she has stupid hair, she's a",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 42.12,
+      "end": 43.28,
+      "text": "bitch, bitch, bitch, bitch",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 43.28,
+      "end": 45.1,
+      "text": "Bitch, bitch, bitch, bitch, bitch, bitch",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 45.1,
+      "end": 46.24,
+      "text": "She's a stupid bitch",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 46.24,
+      "end": 47.6,
+      "text": "Cause mom's a bitch",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 47.6,
+      "end": 49.28,
+      "text": "And she's not a dirty bitch",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 49.28,
+      "end": 51.1,
+      "text": "Talk to kids around the world that",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 51.1,
+      "end": 52.28,
+      "text": "might go a little bit something like",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 52.28,
+      "end": 52.58,
+      "text": "this",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 54,
+      "end": 61,
+      "text": "[Coro em outros idiomas]",
+      "speaker": "Coro",
+      "automatic": true
+    },
+    {
+      "start": 61,
+      "end": 68,
+      "text": "[Coro em outros idiomas]",
+      "speaker": "Coro",
+      "automatic": true
+    },
+    {
+      "start": 68,
+      "end": 75,
+      "text": "[Coro em outros idiomas]",
+      "speaker": "Coro",
+      "automatic": true
+    },
+    {
+      "start": 75,
+      "end": 84,
+      "text": "[Coro em outros idiomas]",
+      "speaker": "Coro",
+      "automatic": true
+    },
+    {
+      "start": 87.44,
+      "end": 87.74,
+      "text": "Yeah",
+      "speaker": "Cartman",
+      "automatic": true
+    },
+    {
+      "start": 93.8,
+      "end": 94.5,
+      "text": "What",
+      "speaker": "Cartman",
+      "automatic": true
+    }
+  ],
+  "source": "User supplied MP3",
+  "analysis": "ASR word timestamps + spectral onsets; dialogue speaker ranges reviewed against transcript",
+  "transcriptAutomatic": true
+}

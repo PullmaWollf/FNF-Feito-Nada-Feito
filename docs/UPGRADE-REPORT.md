@@ -1,3 +1,5 @@
+> Relatório histórico da etapa anterior. Para o estado atual com MP3 fornecido, Cartman jogável, Kyle adversário e Vercel, consulte [MP3-UPGRADE.md](MP3-UPGRADE.md).
+
 # Upgrade: Story Mode e fundamentos da especificação
 
 ## Auditoria e plano executado

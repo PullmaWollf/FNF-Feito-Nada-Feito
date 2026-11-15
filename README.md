@@ -64,7 +64,7 @@ Waitress serve WSGI e WhiteNoise entrega os estáticos; `PORT` é opcional. Use 
 
 ## Créditos e escopo
 
-Referência solicitada: https://gamebanana.com/games/8694 . Friday Night Funkin’ pertence aos seus respectivos criadores. Esta é uma adaptação web independente e não um mod carregável no Psych Engine/Funkin original. Personagem rival Raze, desenhos vetoriais e trilha sintetizada foram criados para este projeto; não contém sprites ou gravações oficiais. A jogabilidade segue o duelo de quatro pistas, notas ascendentes, sustentações, julgamentos e barra de vida do jogo de referência. Bootstrap mantém seu aviso de licença MIT no arquivo distribuído.
+Referência solicitada: https://gamebanana.com/games/8694 . Friday Night Funkin’ pertence aos seus respectivos criadores. Esta é uma adaptação web independente e não um mod carregável no Psych Engine/Funkin original. Personagem rival Raze, desenhos vetoriais e trilha sintetizada foram criados para este projeto; as faixas iniciais continuam sintetizadas; a fase secreta contém o MP3 e as imagens fornecidos pelo usuário, com os direitos dos respectivos titulares. A jogabilidade segue o duelo de quatro pistas, notas ascendentes, sustentações, julgamentos e barra de vida do jogo de referência. Bootstrap mantém seu aviso de licença MIT no arquivo distribuído.
 
 ## Dificuldades e duração
 
@@ -78,7 +78,7 @@ Scrollspeed é a velocidade de deslocamento, independente da densidade: 460 / 59
 
 ## Story Mode, configurações e especificação técnica
 
-A história exige três vitórias em sequência, mantendo a dificuldade escolhida. Derrota permite repetir a fase; sair e começar outra história reinicia a sequência. Vencer libera Freeplay. Vencer a história no Insane também libera **Respect My Rhythm**, contra Cartman, com densidade crescente e dueto original no final. Só o trecho de letra fornecido pelo usuário aparece na tela; não há gravação ou letra completa da canção oficial.
+A história exige três vitórias em sequência, mantendo a dificuldade escolhida. Derrota permite repetir a fase; sair e começar outra história reinicia a sequência. Vencer libera Freeplay. Vencer a história no Insane também libera **Respect My Rhythm**, contra Cartman, com densidade crescente e dueto original no final. A atualização MP3 descrita abaixo substitui a antiga demonstração original da fase secreta pelo arquivo fornecido pelo usuário.
 
 Configurações: tamanho das notas, multiplicador de scrollspeed, mix por categoria, calibração por oito toques, janelas Padrão/Preciso/Relaxado, modo de desempenho e redução de efeitos. Treino em Freeplay desativa derrota e não concede recordes ou desbloqueios. Preferências e progressão ficam no LocalStorage.
 
@@ -87,3 +87,13 @@ Charts v3 contêm IDs de nota, `time` e `hold` em segundos, `lane` de 0 a 3, `si
 Resultados exibem rank e julgamentos; recordes usam chave de música/dificuldade/versão. A política de ghosts, holds, accuracy, timing e os limites da calibração estão descritos no [relatório de upgrade](docs/UPGRADE-REPORT.md). O relatório também distingue testes automatizados, smoke test de navegador e itens ainda pendentes dos documentos.
 
 O áudio atual continua uma composição demonstrativa sintetizada, sem promessa de vocais humanos. A fundação para stems originais/licenciados está implementada; arquivos OGG gravados ainda não foram fornecidos. Não há CDN de música, conta ou backend competitivo.
+
+## Atualização MP3 / Cartman × Kyle
+
+A faixa secreta agora usa o MP3 fornecido pelo usuário. **Você controla Cartman e enfrenta Kyle**, com as referências PNG anexadas, animação por camadas, cenário escolar e legendas temporizadas perto da vida. O mapa combina timestamps de palavras e ataques do áudio real. As legendas são automáticas e não cobrem literalmente o coro em outros idiomas.
+
+O Story Mode troca de música automaticamente com uma transição breve. No mobile, arrastar um dedo atravessando as faixas conta as entradas intermediárias. Os gráficos das notas usam cache. A música original de menu começa após a primeira interação, devido à política de autoplay.
+
+Em **Estúdio MP3**, importe áudio, selecione os personagens e gere um mapa automático. O analisador detecta ritmo/ataques; não faz separação de falantes nem transcreve letras de novos arquivos. Arquivos e mapas ficam neste navegador via IndexedDB e não são enviados à Vercel.
+
+**Deploy:** [instruções para importar este GitHub na Vercel](docs/VERCEL.md). Há suporte nativo a Django, Python 3.13, sem frontend build ou banco de dados. Leia o [relatório desta atualização](docs/MP3-UPGRADE.md) para arquivos, testes e limitações.

@@ -1,5 +1,7 @@
 """Seeded phrase arrangements with syncopation, variations and final-stage bursts."""
 import random
+import json
+from pathlib import Path
 LEVELS = [
     dict(id=1, name='Pavio Curto', subtitle='Todo mundo tem um limite.', bpm=128, bars=56, speed=460, anger='IRRITADO', color='#c3f451'),
     dict(id=2, name='Pressão Alta', subtitle='Você está testando a paciência dele.', bpm=158, bars=68, speed=590, anger='FURIOSO', color='#ffac45'),
@@ -13,7 +15,7 @@ MELODIES = [
     [10,7,5,3,5,7,3,2,0,2,3,0],
 ]
 DIFFICULTIES = ('easy', 'medium', 'hard', 'insane')
-SECRET = dict(id=4,name='Respect My Rhythm',subtitle='Cartman não aceita perder. Dueto original no final.',bpm=172,bars=72,speed=690,anger='BÔNUS SECRETO',color='#f6d44b')
+SECRET = dict(id=4,name="Kyle’s Mom",subtitle='Você é Cartman. Kyle é o rival. Áudio MP3 fornecido pelo jogador.',bpm=172,bars=72,speed=690,anger='BÔNUS SECRETO',color='#f6d44b')
 
 def finalize_chart(c):
     c.update(chart_version=3,meter='4/4',key='C minor',offset=0)
@@ -27,28 +29,26 @@ def finalize_chart(c):
     return c
 
 def secret_chart(difficulty):
-    beat=60/SECRET['bpm']
-    notes=[]
-    for bar in range(SECRET['bars']):
-        phase=min(3,bar//18)
-        steps=[4,6,8,12][phase]
-        for i in range(steps):
-            side='enemy' if bar%4<2 else 'player'
-            time=round((4+bar*4+i*4/steps)*beat,5)
-            n=dict(time=time,lane=(i+bar)%4,side=side,hold=0,pitch=MELODIES[bar//4%4][i%12])
-            notes.append(n)
-            if bar>=56:
-                notes.append(dict(n,side='player' if side=='enemy' else 'enemy'))
-            if phase==3 and i%4==2:
-                notes.append(dict(n,lane=(n['lane']+2)%4))
-    notes.sort(key=lambda n:n['time'])
-    music=[dict(n) for n in notes]
-    if difficulty in ('easy','medium'):
-        notes=[n for i,n in enumerate(notes) if i%(4 if difficulty=='easy' else 2)==0]
-    elif difficulty=='hard':
-        seen=set()
-        notes=[n for n in notes if (n['side'],n['time']) not in seen and not seen.add((n['side'],n['time']))]
-    return finalize_chart(dict(**SECRET,difficulty=difficulty,duration=(4+SECRET['bars']*4+2)*beat,notes=notes,music=music,attacks=[],duet_start=(4+56*4)*beat))
+    data=json.loads((Path(__file__).parent/'cartman_audio_chart.json').read_text(encoding='utf8'))
+    meta=dict(SECRET,bpm=data['bpm'])
+    beat=60/meta['bpm'];count_in=4*beat
+    meta['bars']=round(data['audio_duration']/beat/4)
+    music=[];notes=[]
+    for side in ('player','enemy'):
+        sequence=[n for n in data['notes'] if n['side']==side]
+        for i,n in enumerate(sequence):
+            item=dict(n,time=round(n['time']+count_in,5))
+            music.append(item)
+            if difficulty=='easy' and i%4:continue
+            if difficulty=='medium' and i%2:continue
+            notes.append(dict(item))
+            if difficulty=='insane' and i%(12 if n['time']<30 else 8 if n['time']<60 else 5)==0:
+                notes.append(dict(item,lane=(item['lane']+2)%4))
+    notes.sort(key=lambda n:n['time']);music.sort(key=lambda n:n['time'])
+    subtitles=[dict(s,start=s['start']+count_in,end=s['end']+count_in) for s in data['subtitles']]
+    c=finalize_chart(dict(**meta,difficulty=difficulty,duration=data['audio_duration']+count_in+.4,audio_duration=data['audio_duration'],count_in=count_in,audio_url='/static/media/cartman-kyle.mp3',player='cartman',opponent='kyle',notes=notes,music=music,subtitles=subtitles,attacks=[],duet_start=count_in+84))
+    c['chart_version']=4
+    return c
 
 def make_chart(level, difficulty='hard'):
     if difficulty not in DIFFICULTIES:
